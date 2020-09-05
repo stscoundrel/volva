@@ -1,7 +1,7 @@
 const { getType } = require('../index.js');
 
 const {
-  ARRAY, BOOLEAN, FLOAT, INTEGER, OBJECT, STRING,
+  ARRAY, BOOLEAN, FLOAT, INTEGER, NULL, OBJECT, STRING,
 } = require('../src/constants/types')
 
 describe('Type checker (general)', () => {
@@ -53,5 +53,19 @@ describe('Types: identifies types', () => {
     const result = getType(input)
 
     expect(result).toBe(BOOLEAN)
+  })
+
+  test('Identifies null', () => {
+    const input = null
+    const result = getType(input)
+
+    expect(result).toBe(NULL)
+  })
+
+  test('Identifies function', () => {
+    const input = () => {}
+    const result = getType(input)
+
+    expect(result).toBe('function')
   })
 })
