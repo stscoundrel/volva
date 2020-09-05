@@ -18,6 +18,13 @@ describe('Integers (should return true)', () => {
 })
 
 describe('Integers (should return false)', () => {
+  test('Returns false on string form integer', () => {
+    const input = '1917'
+    const result = isInteger(input)
+
+    expect(result).toBe(false)
+  })
+
   test('Returns false on double', () => {
     const input = 30.7
     const result = isInteger(input)
@@ -79,6 +86,14 @@ describe('Integers (should return true) / Legacy browsers', () => {
 })
 
 describe('Integers (should return false) / Legacy browsers', () => {
+  test('Returns false on string form integer', () => {
+    Number.isInteger = undefined
+    const input = '1917'
+    const result = isInteger(input)
+
+    expect(result).toBe(false)
+  })
+  
   test('Returns false on double', () => {
     Number.isInteger = undefined
     const input = 30.7
