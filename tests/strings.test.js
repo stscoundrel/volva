@@ -64,4 +64,18 @@ describe('Strings (arguments)', () => {
 
     expect(result).toBe(true)
   })
+
+  test('Returns false on bool value true', () => {
+    const input = true
+    const result = isString(input)
+
+    expect(result).toBe(false)
+  })
+
+  test('Returns false on bool value false', () => {
+    const input = false
+    const result = isString(input)
+
+    expect(result).toBe(false)
+  })
 })

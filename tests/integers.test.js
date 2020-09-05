@@ -80,6 +80,20 @@ describe('Integers (should return false)', () => {
 
     expect(result).toBe(false)
   })
+
+  test('Returns false on bool value true', () => {
+    const input = true
+    const result = isInteger(input)
+
+    expect(result).toBe(false)
+  })
+
+  test('Returns false on bool value false', () => {
+    const input = false
+    const result = isInteger(input)
+
+    expect(result).toBe(false)
+  })
 })
 
 describe('Integers (should return true) / Legacy browsers', () => {
@@ -152,6 +166,22 @@ describe('Integers (should return false) / Legacy browsers', () => {
   test('Returns false on string', () => {
     Number.isInteger = undefined
     const input = 'Today is a good day to die'
+    const result = isInteger(input)
+
+    expect(result).toBe(false)
+  })
+
+  test('Returns false on bool value true', () => {
+    Number.isInteger = undefined
+    const input = true
+    const result = isInteger(input)
+
+    expect(result).toBe(false)
+  })
+
+  test('Returns false on bool value false', () => {
+    Number.isInteger = undefined
+    const input = false
     const result = isInteger(input)
 
     expect(result).toBe(false)

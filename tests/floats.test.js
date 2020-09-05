@@ -91,4 +91,18 @@ describe('Floats (should return false)', () => {
 
     expect(result).toBe(false)
   })
+
+  test('Returns false on bool value true', () => {
+    const input = true
+    const result = isFloat(input)
+
+    expect(result).toBe(false)
+  })
+
+  test('Returns false on bool value false', () => {
+    const input = false
+    const result = isFloat(input)
+
+    expect(result).toBe(false)
+  })
 })

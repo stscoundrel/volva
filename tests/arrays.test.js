@@ -57,6 +57,20 @@ describe('Arrays (modern browsers)', () => {
 
     expect(result).toBe(true)
   })
+
+  test('Returns false on bool value true', () => {
+    const input = true
+    const result = isArray(input)
+
+    expect(result).toBe(false)
+  })
+
+  test('Returns false on bool value false', () => {
+    const input = false
+    const result = isArray(input)
+
+    expect(result).toBe(false)
+  })
 })
 
 describe('Arrays (legacy browsers)', () => {
@@ -122,5 +136,23 @@ describe('Arrays (legacy browsers)', () => {
     const result = isArray(input)
 
     expect(result).toBe(true)
+  })
+
+  test('Returns false on bool value true', () => {
+    // Simulate missing features
+    Array.isArray = undefined
+    const input = true
+    const result = isArray(input)
+
+    expect(result).toBe(false)
+  })
+
+  test('Returns false on bool value false', () => {
+    // Simulate missing features
+    Array.isArray = undefined
+    const input = false
+    const result = isArray(input)
+
+    expect(result).toBe(false)
   })
 })
