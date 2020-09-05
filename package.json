@@ -20,7 +20,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "fix": "eslint . --fix",
     "test": "jest --verbose --runInBand --passWithNoTests",
     "prepublishOnly": "npm test" 
   }
