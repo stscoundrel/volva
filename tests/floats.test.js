@@ -1,75 +1,93 @@
-const { isNumber } = require('../index.js');
+const { isFloat } = require('../index.js');
 
-describe('Numbers (general)', () => {
+describe('Floats (general)', () => {
   test('Throws error on missing argument', () => {
     expect(() => {
-      isNumber()
+      isFloat()
     }).toThrow('Missing argument')
   })
 })
 
-describe('Numbers (should return true)', () => {
-  test('Returns true on integer', () => {
-    const input = 5
-    const result = isNumber(input)
+describe('Floats (should return true)', () => {
+  test('Returns true on float', () => {
+    const input = 30.789
+    const result = isFloat(input)
+
+    const input2 = 0.4643745584584458
+    const result2 = isFloat(input2)
 
     expect(result).toBe(true)
+    expect(result2).toBe(true)
   })
 
-  test('Returns true on float', () => {
-    const input = 30.7
-    const result = isNumber(input)
+  test('Returns true on negative float', () => {
+    const input = -6.12
+    const result = isFloat(input)
 
     expect(result).toBe(true)
   })
 })
 
-describe('Numbers (should return false)', () => {
+describe('Floats (should return false)', () => {
+  test('Returns false on zero', () => {
+    const input = 0
+    const result = isFloat(input)
+
+    expect(result).toBe(false)
+  })
+
+  test('Returns false on integer', () => {
+    const input = 89
+    const result = isFloat(input)
+
+    expect(result).toBe(false)
+  })
+
   test('Returns false on string form number', () => {
     const input = '1917'
-    const result = isNumber(input)
+    const result = isFloat(input)
 
     expect(result).toBe(false)
   })
 
   test('Returns false on null', () => {
     const input = null
-    const result = isNumber(input)
+    const result = isFloat(input)
 
     expect(result).toBe(false)
   })
 
   test('Returns false on empty array', () => {
     const input = []
-    const result = isNumber(input)
+    const result = isFloat(input)
 
     expect(result).toBe(false)
   })
 
   test('Returns false on populated array', () => {
     const input = ['Revenger', 'Shadow Captain', 'Bone Silence']
-    const result = isNumber(input)
+    const result = isFloat(input)
 
     expect(result).toBe(false)
   })
 
   test('Returns false on object', () => {
     const input = { title: 'Bone Silence', author: 'Alastair Reynolds' }
-    const result = isNumber(input)
+    const result = isFloat(input)
 
     expect(result).toBe(false)
   })
 
   test('Returns false on empty string', () => {
     const input = ''
-    const result = isNumber(input)
+    const result = isFloat(input)
 
     expect(result).toBe(false)
   })
 
   test('Returns false on string', () => {
     const input = 'Today is a good day to die'
-    const result = isNumber(input)
+    const result = isFloat(input)
 
     expect(result).toBe(false)
   })

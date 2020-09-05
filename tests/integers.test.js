@@ -9,8 +9,15 @@ describe('Integers (general)', () => {
 })
 
 describe('Integers (should return true)', () => {
-  test('Returns true on integer', () => {
+  test('Returns true on positive integer', () => {
     const input = 5
+    const result = isInteger(input)
+
+    expect(result).toBe(true)
+  })
+
+  test('Returns true on negative integer', () => {
+    const input = -2
     const result = isInteger(input)
 
     expect(result).toBe(true)
@@ -25,7 +32,7 @@ describe('Integers (should return false)', () => {
     expect(result).toBe(false)
   })
 
-  test('Returns false on double', () => {
+  test('Returns false on float', () => {
     const input = 30.7
     const result = isInteger(input)
 
@@ -93,8 +100,8 @@ describe('Integers (should return false) / Legacy browsers', () => {
 
     expect(result).toBe(false)
   })
-  
-  test('Returns false on double', () => {
+
+  test('Returns false on float', () => {
     Number.isInteger = undefined
     const input = 30.7
     const result = isInteger(input)

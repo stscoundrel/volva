@@ -16,7 +16,7 @@ describe('Objects (arguments)', () => {
     expect(result).toBe(false)
   })
 
-  test('Returns false on double', () => {
+  test('Returns false on float', () => {
     const input = 30.7
     const result = isObject(input)
 

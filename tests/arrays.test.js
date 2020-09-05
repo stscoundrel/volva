@@ -16,7 +16,7 @@ describe('Arrays (modern browsers)', () => {
     expect(result).toBe(false)
   })
 
-  test('Returns false on double', () => {
+  test('Returns false on float', () => {
     const input = 30.7
     const result = isArray(input)
 
@@ -70,7 +70,7 @@ describe('Arrays (legacy browsers)', () => {
     expect(result).toBe(false)
   })
 
-  test('Returns false on double', () => {
+  test('Returns false on float', () => {
     // Simulate missing features
     Array.isArray = undefined
     const input = 30.7
