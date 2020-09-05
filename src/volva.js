@@ -6,6 +6,8 @@ const isNumber = require('./numbers.js')
 const isObject = require('./objects.js')
 const isString = require('./strings.js')
 
+const getType = require('./types.js')
+
 module.exports = {
   isArray,
   isBoolean,
@@ -14,4 +16,5 @@ module.exports = {
   isNumber,
   isObject,
   isString,
+  getType,
 }
