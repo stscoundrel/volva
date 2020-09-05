@@ -2,7 +2,7 @@
  * Check if browser supports Array.isArray
  */
 const isLegacyEnvironment = () => {
-  if (typeof Number.isinteger === 'undefined') {
+  if (typeof Number.isInteger === 'undefined') {
     return true
   }
 
