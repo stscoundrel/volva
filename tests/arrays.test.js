@@ -1,15 +1,14 @@
-const { isArray } = require('../src/volva.js');
+const { isArray } = require('../index.js')
 
 describe('Arrays (general)', () => {
   test('Throws error on missing argument', () => {
     expect(() => {
       isArray()
-    }).toThrow()
+    }).toThrow('Missing argument')
   })
 })
 
 describe('Arrays (modern browsers)', () => {
-
   test('Returns false on integer', () => {
     const input = 5
     const result = isArray(input)
@@ -53,7 +52,7 @@ describe('Arrays (modern browsers)', () => {
   })
 
   test('Returns true on populated array', () => {
-    const input = [ 'Revenger', 'Shadow Captain', 'Bone Silence' ]
+    const input = ['Revenger', 'Shadow Captain', 'Bone Silence']
     const result = isArray(input)
 
     expect(result).toBe(true)
@@ -119,7 +118,7 @@ describe('Arrays (legacy browsers)', () => {
   test('Returns true on populated array', () => {
     // Simulate missing features
     Array.isArray = undefined
-    const input = [ 'Revenger', 'Shadow Captain', 'Bone Silence' ]
+    const input = ['Revenger', 'Shadow Captain', 'Bone Silence']
     const result = isArray(input)
 
     expect(result).toBe(true)
