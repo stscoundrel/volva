@@ -11,6 +11,10 @@ Type checking with javascript can be inconsistent. `typeof yourVariable` tells o
 
 Vǫlva hides these inconsistensies behind simple-to-remember API with comprehensive test suite.
 
+### Install
+
+`yarn add volva`
+
 
 ### Usage
 
@@ -28,26 +32,26 @@ const {
 } = require('volva')
 
 
-console.log(isArray( [1,2,3,4] ) // True.
-console.log(isArray( {} ) // False.
+console.log(isArray( [1,2,3,4] ) ) // True.
+console.log(isArray( {} ) ) // False.
 
-console.log(isBoolean( false ) // True.
-console.log(isBoolean( 'true' ) // False.
+console.log(isBoolean( false ) ) // True.
+console.log(isBoolean( 'true' ) ) // False.
 
-console.log(isFloat( 30.7 ) // True.
-console.log(isFloat( 30 ) // False.
+console.log(isFloat( 30.7 ) ) // True.
+console.log(isFloat( 30 ) ) // False.
 
-console.log(isInteger( 30 ) // True.
-console.log(isInteger( 30.7 ) // False.
+console.log(isInteger( 30 ) ) // True.
+console.log(isInteger( 30.7 ) ) // False.
 
-console.log(isNumber( 666 ) // True.
-console.log(isNumber( 'Number' ) // False.
+console.log(isNumber( 666 ) ) // True.
+console.log(isNumber( 'Number' ) ) // False.
 
-console.log(isObject( { title: 'Bone Silence', author: 'Alastair Reynolds' } ) // True.
-console.log(isObject( [1,2,3,4] ) // False.
+console.log(isObject( { title: 'Bone Silence', author: 'Alastair Reynolds' } ) ) // True.
+console.log(isObject( [1,2,3,4] ) ) // False.
 
-console.log(isString( 'I was forced to speak, no silence is my name' ) // True.
-console.log(isString( 1917 ) // False.
+console.log(isString( 'I was forced to speak, no silence is my name' ) ) // True.
+console.log(isString( 1917 ) ) // False.
 ```
 
 
