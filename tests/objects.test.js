@@ -8,7 +8,23 @@ describe('Objects (general)', () => {
   })
 })
 
-describe('Objects (arguments)', () => {
+describe('Objects should return true', () => {
+  test('Returns true on object with keys & values', () => {
+    const input = { title: 'Bone Silence', author: 'Alastair Reynolds' }
+    const result = isObject(input)
+
+    expect(result).toBe(true)
+  })
+
+  test('Returns true on empty object', () => {
+    const input = {}
+    const result = isObject(input)
+
+    expect(result).toBe(true)
+  })
+})
+
+describe('Objects should return false', () => {
   test('Returns false on integer', () => {
     const input = 5
     const result = isObject(input)
@@ -49,13 +65,6 @@ describe('Objects (arguments)', () => {
     const result = isObject(input)
 
     expect(result).toBe(false)
-  })
-
-  test('Returns true on object', () => {
-    const input = { title: 'Bone Silence', author: 'Alastair Reynolds' }
-    const result = isObject(input)
-
-    expect(result).toBe(true)
   })
 
   test('Returns false on bool value true', () => {

@@ -8,7 +8,23 @@ describe('Strings (general)', () => {
   })
 })
 
-describe('Strings (arguments)', () => {
+describe('Strings should return true', () => {
+  test('Returns true on empty string', () => {
+    const input = ''
+    const result = isString(input)
+
+    expect(result).toBe(true)
+  })
+
+  test('Returns true on string', () => {
+    const input = 'Today is a good day to die'
+    const result = isString(input)
+
+    expect(result).toBe(true)
+  })
+})
+
+describe('Strings should return false', () => {
   test('Returns false on integer', () => {
     const input = 5
     const result = isString(input)
@@ -49,20 +65,6 @@ describe('Strings (arguments)', () => {
     const result = isString(input)
 
     expect(result).toBe(false)
-  })
-
-  test('Returns true on empty string', () => {
-    const input = ''
-    const result = isString(input)
-
-    expect(result).toBe(true)
-  })
-
-  test('Returns true on string', () => {
-    const input = 'Today is a good day to die'
-    const result = isString(input)
-
-    expect(result).toBe(true)
   })
 
   test('Returns false on bool value true', () => {
