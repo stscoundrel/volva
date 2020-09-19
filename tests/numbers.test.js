@@ -87,4 +87,11 @@ describe('Numbers (should return false)', () => {
 
     expect(result).toBe(false)
   })
+
+  test('Returns false on NaN', () => {
+    const input = NaN
+    const result = isNumber(input)
+
+    expect(result).toBe(false)
+  })
 })
