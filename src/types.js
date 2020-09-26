@@ -4,7 +4,7 @@ const isInteger = require('./integers.js')
 const isObject = require('./objects.js')
 
 const {
-  ARRAY, BOOLEAN, FLOAT, INTEGER, NUMBER, NULL, OBJECT, STRING,
+  ARRAY, BOOLEAN, FLOAT, INTEGER, NUMBER, NAN, NULL, OBJECT, STRING,
 } = require('./constants/types')
 
 /**
@@ -42,6 +42,8 @@ const getType = (input) => {
     if (isFloat(input)) {
       return FLOAT
     }
+
+    return NAN
   }
 
   // Arrays.

@@ -68,4 +68,11 @@ describe('Types: identifies types', () => {
 
     expect(result).toBe('function')
   })
+
+  test('Identifies NaN', () => {
+    const input = NaN
+    const result = getType(input)
+
+    expect(result).toBe('NaN')
+  })
 })
