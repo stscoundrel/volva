@@ -1,6 +1,7 @@
 const ARRAY = 'array'
 const BOOLEAN = 'boolean'
 const FLOAT = 'float'
+const FUNCTION = 'function'
 const INTEGER = 'integer'
 const NAN = 'NaN'
 const NULL = 'null'
@@ -12,6 +13,7 @@ module.exports = {
   ARRAY,
   BOOLEAN,
   FLOAT,
+  FUNCTION,
   INTEGER,
   NULL,
   NAN,
