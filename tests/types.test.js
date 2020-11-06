@@ -1,7 +1,7 @@
 const { getType } = require('../index.js');
 
 const {
-  ARRAY, BOOLEAN, FLOAT, INTEGER, NULL, OBJECT, STRING,
+  ARRAY, BOOLEAN, FLOAT, INTEGER, NULL, OBJECT, STRING, FUNCTION,
 } = require('../src/constants/types')
 
 describe('Type checker (general)', () => {
@@ -66,7 +66,7 @@ describe('Types: identifies types', () => {
     const input = () => {}
     const result = getType(input)
 
-    expect(result).toBe('function')
+    expect(result).toBe(FUNCTION)
   })
 
   test('Identifies NaN', () => {
