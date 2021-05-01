@@ -1,6 +1,6 @@
 {
   "name": "volva",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Easier type checks for JS variables.",
   "main": "index.js",
   "repository": "https://github.com/stscoundrel/volva.git",
