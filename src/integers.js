@@ -1,4 +1,4 @@
-const { isLegacyEnvironment, legacyIsInteger } = require('./legacy/integers.js')
+const { isLegacyEnvironment, legacyIsInteger } = require('./legacy/integers')
 
 const isInteger = (input) => {
   if (input === undefined) throw new Error('Missing argument')

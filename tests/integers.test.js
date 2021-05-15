@@ -1,4 +1,4 @@
-const { isInteger } = require('../index.js');
+const { isInteger } = require('../index');
 
 describe('Integers (general)', () => {
   test('Throws error on missing argument', () => {

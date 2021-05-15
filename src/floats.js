@@ -1,4 +1,4 @@
-const isNumber = require('./numbers.js')
+const isNumber = require('./numbers')
 
 const isFloat = (input) => {
   if (input === undefined) throw new Error('Missing argument')

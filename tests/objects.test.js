@@ -1,4 +1,4 @@
-const { isObject } = require('../index.js');
+const { isObject } = require('../index');
 
 describe('Objects (general)', () => {
   test('Throws error on missing argument', () => {

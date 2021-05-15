@@ -1,4 +1,4 @@
-const { isFunction } = require('../index.js');
+const { isFunction } = require('../index');
 
 describe('Functions (general)', () => {
   test('Throws error on missing argument', () => {

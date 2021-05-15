@@ -1,4 +1,4 @@
-const { isMap } = require('../index.js');
+const { isMap } = require('../index');
 
 describe('Maps (general)', () => {
   test('Throws error on missing argument', () => {

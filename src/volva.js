@@ -1,15 +1,15 @@
-const isArray = require('./arrays.js')
-const isBoolean = require('./booleans.js')
-const isFloat = require('./floats.js')
-const isFunction = require('./functions.js')
-const isInteger = require('./integers.js')
-const isMap = require('./maps.js')
-const isNumber = require('./numbers.js')
-const isObject = require('./objects.js')
-const isSet = require('./sets.js')
-const isString = require('./strings.js')
+const isArray = require('./arrays')
+const isBoolean = require('./booleans')
+const isFloat = require('./floats')
+const isFunction = require('./functions')
+const isInteger = require('./integers')
+const isMap = require('./maps')
+const isNumber = require('./numbers')
+const isObject = require('./objects')
+const isSet = require('./sets')
+const isString = require('./strings')
 
-const getType = require('./types.js')
+const getType = require('./types')
 
 module.exports = {
   isArray,

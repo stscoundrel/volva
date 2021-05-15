@@ -1,4 +1,4 @@
-const { isNumber } = require('../index.js');
+const { isNumber } = require('../index');
 
 describe('Numbers (general)', () => {
   test('Throws error on missing argument', () => {
