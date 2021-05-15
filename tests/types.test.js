@@ -75,4 +75,11 @@ describe('Types: identifies types', () => {
 
     expect(result).toBe('NaN')
   })
+
+  test('Identifies Map', () => {
+    const input = new Map()
+    const result = getType(input)
+
+    expect(result).toBe('Map')
+  })
 })
