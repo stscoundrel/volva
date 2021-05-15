@@ -87,4 +87,11 @@ describe('Objects should return false', () => {
 
     expect(result).toBe(false)
   })
+
+  test('Returns false on Set', () => {
+    const input = new Set()
+    const result = isObject(input)
+
+    expect(result).toBe(false)
+  })
 })

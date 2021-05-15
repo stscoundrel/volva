@@ -82,4 +82,11 @@ describe('Types: identifies types', () => {
 
     expect(result).toBe('Map')
   })
+
+  test('Identifies Set', () => {
+    const input = new Set()
+    const result = getType(input)
+
+    expect(result).toBe('Set')
+  })
 })

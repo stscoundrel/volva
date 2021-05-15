@@ -4,9 +4,10 @@ const isInteger = require('./integers.js')
 const isMap = require('./maps.js')
 const isObject = require('./objects.js')
 const isFunction = require('./functions.js')
+const isSet = require('./sets.js')
 
 const {
-  ARRAY, BOOLEAN, FLOAT, FUNCTION, INTEGER, MAP, NUMBER, NAN, NULL, OBJECT, STRING,
+  ARRAY, BOOLEAN, FLOAT, FUNCTION, INTEGER, MAP, NUMBER, NAN, NULL, OBJECT, SET, STRING,
 } = require('./constants/types')
 
 /**
@@ -71,6 +72,11 @@ const getType = (input) => {
   // Map
   if (isMap(input)) {
     return MAP
+  }
+
+  // Set
+  if (isSet(input)) {
+    return SET
   }
 
   return type
