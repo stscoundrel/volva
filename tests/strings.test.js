@@ -1,4 +1,4 @@
-const { isString } = require('../index.js');
+const { isString } = require('../index');
 
 describe('Strings (general)', () => {
   test('Throws error on missing argument', () => {

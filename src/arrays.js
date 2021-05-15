@@ -1,4 +1,4 @@
-const { isLegacyEnvironment, legacyIsArray } = require('./legacy/arrays.js')
+const { isLegacyEnvironment, legacyIsArray } = require('./legacy/arrays')
 
 const isArray = (input) => {
   if (input === undefined) throw new Error('Missing argument')

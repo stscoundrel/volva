@@ -1,4 +1,4 @@
-const { isArray } = require('../index.js')
+const { isArray } = require('../index')
 
 describe('Arrays (general)', () => {
   test('Throws error on missing argument', () => {

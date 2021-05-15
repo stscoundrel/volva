@@ -1,4 +1,4 @@
-const { isFloat } = require('../index.js');
+const { isFloat } = require('../index');
 
 describe('Floats (general)', () => {
   test('Throws error on missing argument', () => {

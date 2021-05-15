@@ -1,10 +1,10 @@
-const isArray = require('./arrays.js')
-const isFloat = require('./floats.js')
-const isInteger = require('./integers.js')
-const isMap = require('./maps.js')
-const isObject = require('./objects.js')
-const isFunction = require('./functions.js')
-const isSet = require('./sets.js')
+const isArray = require('./arrays')
+const isFloat = require('./floats')
+const isInteger = require('./integers')
+const isMap = require('./maps')
+const isObject = require('./objects')
+const isFunction = require('./functions')
+const isSet = require('./sets')
 
 const {
   ARRAY, BOOLEAN, FLOAT, FUNCTION, INTEGER, MAP, NUMBER, NAN, NULL, OBJECT, SET, STRING,

@@ -1,4 +1,4 @@
-const { isSet } = require('../index.js');
+const { isSet } = require('../index');
 
 describe('Sets (general)', () => {
   test('Throws error on missing argument', () => {

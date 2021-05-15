@@ -1,6 +1,6 @@
-const isArray = require('./arrays.js')
-const isMap = require('./maps.js')
-const isSet = require('./sets.js')
+const isArray = require('./arrays')
+const isMap = require('./maps')
+const isSet = require('./sets')
 
 const isObject = (input) => {
   if (input === undefined) throw new Error('Missing argument')

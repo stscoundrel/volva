@@ -1,4 +1,4 @@
-const { isBoolean } = require('../index.js');
+const { isBoolean } = require('../index');
 
 describe('Booleans (general)', () => {
   test('Throws error on missing argument', () => {

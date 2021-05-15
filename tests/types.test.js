@@ -1,4 +1,4 @@
-const { getType } = require('../index.js');
+const { getType } = require('../index');
 
 const {
   ARRAY, BOOLEAN, FLOAT, INTEGER, NULL, OBJECT, STRING, FUNCTION,
