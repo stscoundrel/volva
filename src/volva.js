@@ -3,6 +3,7 @@ const isBoolean = require('./booleans.js')
 const isFloat = require('./floats.js')
 const isFunction = require('./functions.js')
 const isInteger = require('./integers.js')
+const isMap = require('./maps.js')
 const isNumber = require('./numbers.js')
 const isObject = require('./objects.js')
 const isString = require('./strings.js')
@@ -15,6 +16,7 @@ module.exports = {
   isFloat,
   isFunction,
   isInteger,
+  isMap,
   isNumber,
   isObject,
   isString,

@@ -1,11 +1,12 @@
 const isArray = require('./arrays.js')
 const isFloat = require('./floats.js')
 const isInteger = require('./integers.js')
+const isMap = require('./maps.js')
 const isObject = require('./objects.js')
 const isFunction = require('./functions.js')
 
 const {
-  ARRAY, BOOLEAN, FLOAT, FUNCTION, INTEGER, NUMBER, NAN, NULL, OBJECT, STRING,
+  ARRAY, BOOLEAN, FLOAT, FUNCTION, INTEGER, MAP, NUMBER, NAN, NULL, OBJECT, STRING,
 } = require('./constants/types')
 
 /**
@@ -65,6 +66,11 @@ const getType = (input) => {
   // Function
   if (isFunction(input)) {
     return FUNCTION
+  }
+
+  // Map
+  if (isMap(input)) {
+    return MAP
   }
 
   return type

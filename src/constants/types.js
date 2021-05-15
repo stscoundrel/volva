@@ -3,6 +3,7 @@ const BOOLEAN = 'boolean'
 const FLOAT = 'float'
 const FUNCTION = 'function'
 const INTEGER = 'integer'
+const MAP = 'Map'
 const NAN = 'NaN'
 const NULL = 'null'
 const NUMBER = 'number'
@@ -15,6 +16,7 @@ module.exports = {
   FLOAT,
   FUNCTION,
   INTEGER,
+  MAP,
   NULL,
   NAN,
   NUMBER,

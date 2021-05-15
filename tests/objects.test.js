@@ -80,4 +80,11 @@ describe('Objects should return false', () => {
 
     expect(result).toBe(false)
   })
+
+  test('Returns false on Map', () => {
+    const input = new Map()
+    const result = isObject(input)
+
+    expect(result).toBe(false)
+  })
 })
