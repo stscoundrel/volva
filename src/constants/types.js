@@ -8,6 +8,7 @@ const NAN = 'NaN'
 const NULL = 'null'
 const NUMBER = 'number'
 const OBJECT = 'object'
+const SET = 'Set'
 const STRING = 'string'
 
 module.exports = {
@@ -21,5 +22,6 @@ module.exports = {
   NAN,
   NUMBER,
   OBJECT,
+  SET,
   STRING,
 }

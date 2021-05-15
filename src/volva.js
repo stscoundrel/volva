@@ -6,6 +6,7 @@ const isInteger = require('./integers.js')
 const isMap = require('./maps.js')
 const isNumber = require('./numbers.js')
 const isObject = require('./objects.js')
+const isSet = require('./sets.js')
 const isString = require('./strings.js')
 
 const getType = require('./types.js')
@@ -19,6 +20,7 @@ module.exports = {
   isMap,
   isNumber,
   isObject,
+  isSet,
   isString,
   getType,
 }
