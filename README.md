@@ -3,8 +3,6 @@
 Easier type checks for JS variables. To replace avant-garde spellcasting like `typeof yourVariable === 'object' && yourVariable !== null` with easier semantics.
 
 
-For more popular library with different syntax approach, check [type-check](https://github.com/gkz/type-check)
-
 ### Motivation
 
 Type checking with javascript can be inconsistent. `typeof yourVariable` tells only half of the story. It does not recognize arrays from objects, it doesn't differentiate integers from floats or nulls from objects. Then you have to remember behind which API the right check was hidden. Not to mention more exact types, like integers or floats.
