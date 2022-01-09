@@ -9,6 +9,7 @@ const isNumber = require('./numbers')
 const isObject = require('./objects')
 const isSet = require('./sets')
 const isString = require('./strings')
+const isSymbol = require('./symbols')
 
 const getType = require('./types')
 
@@ -24,5 +25,6 @@ module.exports = {
   isObject,
   isSet,
   isString,
+  isSymbol,
   getType,
 }

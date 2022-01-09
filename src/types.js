@@ -1,13 +1,16 @@
 const isArray = require('./arrays')
+const isBigInt = require('./bigints')
 const isFloat = require('./floats')
 const isInteger = require('./integers')
 const isMap = require('./maps')
 const isObject = require('./objects')
 const isFunction = require('./functions')
 const isSet = require('./sets')
+const isSymbol = require('./symbols')
 
 const {
-  ARRAY, BOOLEAN, FLOAT, FUNCTION, INTEGER, MAP, NUMBER, NAN, NULL, OBJECT, SET, STRING, BIGINT,
+  ARRAY, BIGINT, BOOLEAN, FLOAT, FUNCTION, INTEGER,
+  MAP, NUMBER, NAN, NULL, OBJECT, SET, STRING, SYMBOL,
 } = require('./constants/types')
 
 /**
@@ -36,10 +39,6 @@ const getType = (input) => {
    *
    * Return more specific types.
    */
-
-  if (type === BIGINT) {
-    return BIGINT
-  }
 
   if (type === NUMBER) {
     if (isInteger(input)) {
@@ -81,6 +80,16 @@ const getType = (input) => {
   // Set
   if (isSet(input)) {
     return SET
+  }
+
+  // Bigint
+  if (isBigInt(input)) {
+    return BIGINT
+  }
+
+  // Symbol
+  if (isSymbol(input)) {
+    return SYMBOL
   }
 
   return type
