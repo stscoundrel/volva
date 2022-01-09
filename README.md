@@ -21,12 +21,17 @@ Vǫlva gives "isX" syntax for common js types. isArray, isObject, isString, isBo
 ```javascript
 const {
   isArray,
+  isBigInt,
   isBoolean,
   isFloat,
+  isFunction,
   isInteger,
+  isMap,
   isNumber,
   isObject,
-  isString
+  isSet,
+  isString,
+  isSymbol,
 } = require('volva')
 
 
