@@ -14,14 +14,14 @@ describe('Arrays (modern browsers)', () => {
       const input = []
       const result = isArray(input)
 
-      expect(result).toBe(true)
+      expect(result).toBeTruthy()
     })
 
     test('Returns true on populated array', () => {
       const input = ['Revenger', 'Shadow Captain', 'Bone Silence']
       const result = isArray(input)
 
-      expect(result).toBe(true)
+      expect(result).toBeTruthy()
     })
   })
 
@@ -30,49 +30,49 @@ describe('Arrays (modern browsers)', () => {
       const input = 5
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on float', () => {
       const input = 30.7
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on string', () => {
       const input = 'Today is a good day to die'
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on object', () => {
       const input = { title: 'Bone Silence', author: 'Alastair Reynolds' }
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on null', () => {
       const input = null
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on bool value true', () => {
       const input = true
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on bool value false', () => {
       const input = false
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
   })
 })
@@ -85,7 +85,7 @@ describe('Arrays (legacy browsers)', () => {
       const input = []
       const result = isArray(input)
 
-      expect(result).toBe(true)
+      expect(result).toBeTruthy()
     })
 
     test('Returns true on populated array', () => {
@@ -94,7 +94,7 @@ describe('Arrays (legacy browsers)', () => {
       const input = ['Revenger', 'Shadow Captain', 'Bone Silence']
       const result = isArray(input)
 
-      expect(result).toBe(true)
+      expect(result).toBeTruthy()
     })
   })
 
@@ -106,7 +106,7 @@ describe('Arrays (legacy browsers)', () => {
       const input = 5
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on float', () => {
@@ -115,7 +115,7 @@ describe('Arrays (legacy browsers)', () => {
       const input = 30.7
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on string', () => {
@@ -124,7 +124,7 @@ describe('Arrays (legacy browsers)', () => {
       const input = 'Today is a good day to die'
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on object', () => {
@@ -133,7 +133,7 @@ describe('Arrays (legacy browsers)', () => {
       const input = { title: 'Bone Silence', author: 'Alastair Reynolds' }
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on null', () => {
@@ -142,7 +142,7 @@ describe('Arrays (legacy browsers)', () => {
       const input = null
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on bool value true', () => {
@@ -151,7 +151,7 @@ describe('Arrays (legacy browsers)', () => {
       const input = true
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
 
     test('Returns false on bool value false', () => {
@@ -160,7 +160,7 @@ describe('Arrays (legacy browsers)', () => {
       const input = false
       const result = isArray(input)
 
-      expect(result).toBe(false)
+      expect(result).toBeFalsy()
     })
   })
 })

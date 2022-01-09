@@ -13,7 +13,7 @@ describe('Maps should return true', () => {
     const input = new Map()
     const result = isMap(input)
 
-    expect(result).toBe(true)
+    expect(result).toBeTruthy()
   })
 })
 
@@ -22,46 +22,46 @@ describe('Maps should return false', () => {
     const input = 5
     const result = isMap(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on float', () => {
     const input = 30.7
     const result = isMap(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on string', () => {
     const input = 'Today is a good day to die'
     const result = isMap(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on null', () => {
     const input = null
     const result = isMap(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on empty array', () => {
     const input = []
     const result = isMap(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on populated array', () => {
     const input = ['Revenger', 'Shadow Captain', 'Bone Silence']
     const result = isMap(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on bools', () => {
-    expect(isMap(false)).toBe(false)
-    expect(isMap(true)).toBe(false)
+    expect(isMap(false)).toBeFalsy()
+    expect(isMap(true)).toBeFalsy()
   })
 })

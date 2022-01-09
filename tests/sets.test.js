@@ -13,7 +13,7 @@ describe('Sets should return true', () => {
     const input = new Set()
     const result = isSet(input)
 
-    expect(result).toBe(true)
+    expect(result).toBeTruthy()
   })
 })
 
@@ -22,53 +22,53 @@ describe('Sets should return false', () => {
     const input = 5
     const result = isSet(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on float', () => {
     const input = 30.7
     const result = isSet(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on string', () => {
     const input = 'Today is a good day to die'
     const result = isSet(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on null', () => {
     const input = null
     const result = isSet(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on empty array', () => {
     const input = []
     const result = isSet(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on populated array', () => {
     const input = ['Revenger', 'Shadow Captain', 'Bone Silence']
     const result = isSet(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on bools', () => {
-    expect(isSet(false)).toBe(false)
-    expect(isSet(true)).toBe(false)
+    expect(isSet(false)).toBeFalsy()
+    expect(isSet(true)).toBeFalsy()
   })
 
   test('Returns false on map', () => {
     const input = new Map()
     const result = isSet(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 })
