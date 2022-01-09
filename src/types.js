@@ -7,7 +7,7 @@ const isFunction = require('./functions')
 const isSet = require('./sets')
 
 const {
-  ARRAY, BOOLEAN, FLOAT, FUNCTION, INTEGER, MAP, NUMBER, NAN, NULL, OBJECT, SET, STRING,
+  ARRAY, BOOLEAN, FLOAT, FUNCTION, INTEGER, MAP, NUMBER, NAN, NULL, OBJECT, SET, STRING, BIGINT,
 } = require('./constants/types')
 
 /**
@@ -36,6 +36,10 @@ const getType = (input) => {
    *
    * Return more specific types.
    */
+
+  if (type === BIGINT) {
+    return BIGINT
+  }
 
   if (type === NUMBER) {
     if (isInteger(input)) {
