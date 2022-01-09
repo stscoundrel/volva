@@ -96,4 +96,11 @@ describe('Types: identifies types', () => {
 
     expect(result).toBe('bigint')
   })
+
+  test('Identifies Symbol', () => {
+    const input = Symbol('and-if-the-day-would-only-come')
+    const result = getType(input)
+
+    expect(result).toBe('symbol')
+  })
 })

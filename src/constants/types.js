@@ -11,6 +11,7 @@ const NUMBER = 'number'
 const OBJECT = 'object'
 const SET = 'Set'
 const STRING = 'string'
+const SYMBOL = 'symbol'
 
 module.exports = {
   ARRAY,
@@ -26,4 +27,5 @@ module.exports = {
   OBJECT,
   SET,
   STRING,
+  SYMBOL,
 }
