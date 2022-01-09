@@ -3,7 +3,7 @@ module.exports = {
   plugins: ['jest'],
   env: {
     node: true,
-    es6: true,
+    es2020: true,
     'jest/globals': true,
   },
   globals: {
