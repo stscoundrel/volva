@@ -13,14 +13,14 @@ describe('Integers (should return true)', () => {
     const input = 5
     const result = isInteger(input)
 
-    expect(result).toBe(true)
+    expect(result).toBeTruthy()
   })
 
   test('Returns true on negative integer', () => {
     const input = -2
     const result = isInteger(input)
 
-    expect(result).toBe(true)
+    expect(result).toBeTruthy()
   })
 })
 
@@ -29,70 +29,70 @@ describe('Integers (should return false)', () => {
     const input = '1917'
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on float', () => {
     const input = 30.7
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on null', () => {
     const input = null
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on empty array', () => {
     const input = []
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on populated array', () => {
     const input = ['Revenger', 'Shadow Captain', 'Bone Silence']
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on object', () => {
     const input = { title: 'Bone Silence', author: 'Alastair Reynolds' }
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on empty string', () => {
     const input = ''
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on string', () => {
     const input = 'Today is a good day to die'
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on bool value true', () => {
     const input = true
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on bool value false', () => {
     const input = false
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 })
 
@@ -102,7 +102,7 @@ describe('Integers (should return true) / Legacy browsers', () => {
     const input = 5
     const result = isInteger(input)
 
-    expect(result).toBe(true)
+    expect(result).toBeTruthy()
   })
 })
 
@@ -112,7 +112,7 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = '1917'
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on float', () => {
@@ -120,7 +120,7 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = 30.7
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on null', () => {
@@ -128,7 +128,7 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = null
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on empty array', () => {
@@ -136,7 +136,7 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = []
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on populated array', () => {
@@ -144,7 +144,7 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = ['Revenger', 'Shadow Captain', 'Bone Silence']
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on object', () => {
@@ -152,7 +152,7 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = { title: 'Bone Silence', author: 'Alastair Reynolds' }
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on empty string', () => {
@@ -160,7 +160,7 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = ''
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on string', () => {
@@ -168,7 +168,7 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = 'Today is a good day to die'
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on bool value true', () => {
@@ -176,7 +176,7 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = true
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 
   test('Returns false on bool value false', () => {
@@ -184,6 +184,6 @@ describe('Integers (should return false) / Legacy browsers', () => {
     const input = false
     const result = isInteger(input)
 
-    expect(result).toBe(false)
+    expect(result).toBeFalsy()
   })
 })
