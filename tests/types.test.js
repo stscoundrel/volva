@@ -89,4 +89,11 @@ describe('Types: identifies types', () => {
 
     expect(result).toBe('Set')
   })
+
+  test('Identifies BigInt', () => {
+    const input = BigInt(9007199254740991)
+    const result = getType(input)
+
+    expect(result).toBe('bigint')
+  })
 })

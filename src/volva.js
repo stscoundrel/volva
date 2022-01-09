@@ -1,4 +1,5 @@
 const isArray = require('./arrays')
+const isBigInt = require('./bigints')
 const isBoolean = require('./booleans')
 const isFloat = require('./floats')
 const isFunction = require('./functions')
@@ -13,6 +14,7 @@ const getType = require('./types')
 
 module.exports = {
   isArray,
+  isBigInt,
   isBoolean,
   isFloat,
   isFunction,

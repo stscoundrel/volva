@@ -30,6 +30,7 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "test": "jest --verbose --runInBand --passWithNoTests",
+    "test:coverage": "yarn test --coverage",
     "prepublishOnly": "npm test"
   }
 }

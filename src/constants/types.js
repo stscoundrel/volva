@@ -1,4 +1,5 @@
 const ARRAY = 'array'
+const BIGINT = 'bigint'
 const BOOLEAN = 'boolean'
 const FLOAT = 'float'
 const FUNCTION = 'function'
@@ -13,6 +14,7 @@ const STRING = 'string'
 
 module.exports = {
   ARRAY,
+  BIGINT,
   BOOLEAN,
   FLOAT,
   FUNCTION,
