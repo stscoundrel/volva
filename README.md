@@ -53,7 +53,7 @@ console.log(isNumber( 'Number' ) ) // False.
 console.log(isObject( { title: 'Bone Silence', author: 'Alastair Reynolds' } ) ) // True.
 console.log(isObject( [1,2,3,4] ) ) // False.
 
-console.log(isString( 'I was forced to speak, no silence is my name' ) ) // True.
+console.log(isString( 'I was forced to speak, now silence is my name' ) ) // True.
 console.log(isString( 1917 ) ) // False.
 ```
 
