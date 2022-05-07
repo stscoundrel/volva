@@ -1,4 +1,4 @@
-name: JavaScript - Lint
+name: TypeScript - Coverage
 
 on: [pull_request]
 
@@ -9,15 +9,15 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x, 18.x]
+        node-version: [18.x]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Lint with Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v2
+    - name: Coverage with Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2.5.1
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install --production=false
-    - run: yarn lint
+    - run: yarn test:coverage
       env:
         CI: true
