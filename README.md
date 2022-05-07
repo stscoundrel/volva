@@ -1,6 +1,6 @@
 # Vǫlva
 
-Easier type checks for JS variables. To replace avant-garde spellcasting like `typeof yourVariable === 'object' && yourVariable !== null` with easier semantics.
+Easier type checks for JS/TS variables. To replace avant-garde spellcasting like `typeof yourVariable === 'object' && yourVariable !== null` with easier semantics.
 
 
 ### Motivation
@@ -19,7 +19,7 @@ Vǫlva hides these inconsistensies behind simple-to-remember API with comprehens
 Vǫlva gives "isX" syntax for common js types. isArray, isObject, isString, isBoolean etc.
 
 ```javascript
-const {
+import {
   isArray,
   isBigInt,
   isBoolean,
@@ -32,57 +32,62 @@ const {
   isSet,
   isString,
   isSymbol,
-} = require('volva')
+} from 'volva';
 
 
-console.log(isArray( [1,2,3,4] ) ) // True.
-console.log(isArray( {} ) ) // False.
+console.log(isArray( [1,2,3,4] ) ); // True.
+console.log(isArray( {} ) ); // False.
 
-console.log(isBoolean( false ) ) // True.
-console.log(isBoolean( 'true' ) ) // False.
+console.log(isBoolean( false ) ); // True.
+console.log(isBoolean( 'true' ) ); // False.
 
-console.log(isFloat( 30.7 ) ) // True.
-console.log(isFloat( 30 ) ) // False.
+console.log(isFloat( 30.7 ) ); // True.
+console.log(isFloat( 30 ) ); // False.
 
-console.log(isInteger( 30 ) ) // True.
-console.log(isInteger( 30.7 ) ) // False.
+console.log(isInteger( 30 ) ); // True.
+console.log(isInteger( 30.7 ) ); // False.
 
-console.log(isNumber( 666 ) ) // True.
-console.log(isNumber( 'Number' ) ) // False.
+console.log(isNumber( 666 ) ); // True.
+console.log(isNumber( 'Number' ) ); // False.
 
-console.log(isObject( { title: 'Bone Silence', author: 'Alastair Reynolds' } ) ) // True.
-console.log(isObject( [1,2,3,4] ) ) // False.
+console.log(isObject( { title: 'Bone Silence', author: 'Alastair Reynolds' } ) ); // True.
+console.log(isObject( [1,2,3,4] ) ); // False.
 
-console.log(isString( 'I was forced to speak, now silence is my name' ) ) // True.
-console.log(isString( 1917 ) ) // False.
+console.log(isString( 'I was forced to speak, now silence is my name' ) ); // True.
+console.log(isString( 1917 ) ); // False.
 ```
 
+### TypeScript usage.
+
+Since v2.0.0 Vǫlva has been written in TypeScript. TypeScript should understand Vǫlvas type-checks with [type predicates](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates). So if you use function like `if(isString(yourVariable))`, TypeScript compiler should understand we're dealing with string variable.
+
+### Additional help for odd cases.
 
 On top of individual type checks, Vǫlva provides `getType()` for getting exact info. Whereas `typeof` may treat all numbers as just "number" or all objects, arrays and nulls as objects, `getType()` tells you exactly what you're dealing with.
 
-Added types are `integer`, `float` and `array`
+Added types are `integer`, `float` and `array` etc.
 
 
 ```javascript
-const { getType } = require('volva')
+import { getType } from 'volva';
 
-const myInteger = 12345
-console.log( getType(myInteger) ) // integer.
+const myInteger = 12345;
+console.log( getType(myInteger) ); // integer.
 
-const myFloat = 353.4644
-console.log( getType(myFloat) ) // float.
+const myFloat = 353.4644;
+console.log( getType(myFloat) ); // float.
 
-const myArray = [ 'Revenger', 'Shadow Captain', 'Bone Silence' ]
-console.log( getType(myArray) ) // array.
+const myArray = [ 'Revenger', 'Shadow Captain', 'Bone Silence' ];
+console.log( getType(myArray) ); // array.
 
-const myObject = {}
-console.log( getType(myObject) ) // object.
+const myObject = {};
+console.log( getType(myObject) ); // object.
 
-const myBool = true
-console.log( getType(myBool) ) // boolean.
+const myBool = true;
+console.log( getType(myBool) ); // boolean.
 
-const myString = 'Far away on the other side, will you come to talk to this night'
-console.log( getType(myString) ) // string.
+const myString = 'Far away on the other side, will you come to talk to this night';
+console.log( getType(myString) ); // string.
 ```
 
 #### What's in the name?
