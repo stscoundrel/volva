@@ -86,7 +86,7 @@ console.log( getType(myObject) ); // object.
 const myBool = true;
 console.log( getType(myBool) ); // boolean.
 
-const myString = 'Far away on the other side, will you come to talk to this night';
+const myString = 'Far away on the other side, will you come to talk to me this night';
 console.log( getType(myString) ); // string.
 ```
 
